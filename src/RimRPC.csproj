@@ -16,7 +16,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\dist\1.4\Assemblies\</OutputPath>
+    <OutputPath>..\dist\1.6\Assemblies\</OutputPath>
     <DefineConstants>
     </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -45,11 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.4.3901</Version>
+      <Version>1.6.4633</Version>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
-      <Version>2.0.2</Version>
+      <Version>2.4.1</Version>
       <ExcludeAssets>runtime</ExcludeAssets>
+      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
   <ItemGroup />

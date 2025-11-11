@@ -8,7 +8,7 @@ namespace RimRPC
 
         public MapCompHandler(Map map) : base(map)
         {
-            this.map = map;
+            //this.map = map;
         }
 
         public override void MapComponentTick()

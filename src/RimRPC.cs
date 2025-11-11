@@ -7,7 +7,7 @@ namespace RimRPC
 {
     public class Mod : Verse.Mod
     {
-        protected Mod(ModContentPack content) : base(content)
+        public Mod(ModContentPack content) : base(content)
         {
             var femboyfoxes = new Harmony("weilbyte.rimworld.rimrpc");
             
@@ -43,7 +43,7 @@ namespace RimRPC
 
             Presence = default;
             Presence.LargeImageKey = "logo";
-            Presence.State = "RPC_MainMenu".Translate();   
+            Presence.State = "RPC_MainMenu".Translate();
             
             DiscordRPC.UpdatePresence(ref Presence);
             ReadyCallback();

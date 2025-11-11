@@ -51,7 +51,7 @@ namespace RimRPC
 
                 _colonyname = GetColonyName();
                 _years = _days / 60;
-                _colonistnumber = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_FreeColonists.Count;
+                _colonistnumber = PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_FreeColonists_NoCryptosleep.Count;
                 _days = GenDate.DaysPassed;
                 _dayhour = GenDate.HourOfDay(Find.TickManager.TicksAbs, longitude);
                 _quadrum = GenDate.Quadrum(Find.TickManager.TicksAbs, longitude);
@@ -59,8 +59,8 @@ namespace RimRPC
 
                 if (map != null)
                 {
-                    var biome = Find.WorldGrid[map.uniqueID].biome;
-                    _biome = biome.LabelCap;
+                    var biome = Find.CurrentMap.Biome.LabelCap;
+                    _biome = biome;
                 }
 
                 string[] stateArgs = { _years.ToString(), _days.ToString(), _dayhour.ToString(), _quadrum.Label(), _biome };
