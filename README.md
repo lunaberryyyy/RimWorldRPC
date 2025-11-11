@@ -23,7 +23,7 @@ RWRichPresence updates your Discord status with some information about your game
 ## Installation
 *Skip to step 3 if you have the mod from Steam Workshop*
 
-1. Download the latest release [(link)](https://github.com/Weilbyte/RWRichPresence/releases)
+1. Download the latest release [(link)](https://github.com/lunaberryyyy/RimWorldRPC/releases)
 2. Extract the `RimRPC` folder from the zip to your RimWorld Mod folder as per usual.
 3. Go to Discord's `discord-rpc` release page. [(link)](https://github.com/discordapp/discord-rpc/releases)
 4. Download `discord-rpc-win.zip` for windows or `discord-rpc-linux.zip` if you are using linux.
@@ -51,3 +51,4 @@ Loan Loosley, Jelly, Toakan, Jdalt40, Weilbyte(v1.0-1.3), NovoDwarf(v1.4), Maste
 ## Links
 
 [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=1463057070)
+
