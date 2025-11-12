@@ -4,7 +4,7 @@
 </p>
 
 # RWRichPresence
-RWRichPresence updates your Discord status with some information about your game. Now updated for the latest version of the game - 1.3!
+RWRichPresence updates your Discord status with some information about your game. Now updated for the latest version of the game - 1.6!
 
 ## Feautures
 
@@ -46,7 +46,7 @@ There is a mod settings menu which you can use to tweak what is displayed. From 
 Make sure RimWorld is added as a game in Discord's settings.
 
 ## Credits
-Jdalt40
+Loan Loosley, Jelly, Toakan, Jdalt40, Weilbyte(v1.0-1.3), NovoDwarf(v1.4), MasterPNJ (v1.5), Lunaberryyyy (v1.6)
 
 ## Links
 

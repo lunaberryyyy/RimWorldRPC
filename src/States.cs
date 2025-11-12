@@ -25,7 +25,8 @@ namespace RimRPC
                 state = GetRpcYear(state, years);
 
             if (RWRPCMod.Settings.RpcBiome)
-                state += biome;
+                state += $" | {biome}";
+                //state += biome;
 
             return state;
         }

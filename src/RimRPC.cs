@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using RimWorld;
 using System;
 using System.Reflection;
 using Verse;
@@ -10,12 +11,12 @@ namespace RimRPC
         public Mod(ModContentPack content) : base(content)
         {
             var femboyfoxes = new Harmony("weilbyte.rimworld.rimrpc");
-            
-            MethodInfo targetmethod = AccessTools.Method(typeof(GenScene), "GoToMainMenu");
-            HarmonyMethod postfixmethod = new HarmonyMethod(typeof(RimRPC).GetMethod("GoToMainMenu_Postfix"));
+
+            MethodInfo targetmethod = AccessTools.Method(typeof(MainMenuDrawer), nameof(MainMenuDrawer.MainMenuOnGUI));
+            HarmonyMethod postfixmethod = new HarmonyMethod(typeof(RimRPC), "GoToMainMenu_Postfix");
             
             femboyfoxes.Patch(targetmethod, null, postfixmethod);
-            
+
             RimRPC.BootMeUp();
         }
     }
@@ -43,7 +44,7 @@ namespace RimRPC
 
             Presence = default;
             Presence.LargeImageKey = "logo";
-            Presence.State = "RPC_MainMenu".Translate();
+            Presence.State = "Loading";
             
             DiscordRPC.UpdatePresence(ref Presence);
             ReadyCallback();
@@ -80,6 +81,7 @@ namespace RimRPC
 
         public static void GoToMainMenu_Postfix()
         {
+            Log.Message("RichPresence :: Attempted MainMenu_Postfix");
             StateHandler.MenuState();
         }
     }
