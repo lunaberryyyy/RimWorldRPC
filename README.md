@@ -6,6 +6,8 @@
 # RWRichPresence
 RWRichPresence updates your Discord status with some information about your game. Now updated for the latest version of the game - 1.6!
 
+This Version supports 1.0-1.4 & 1.6. if you're looking for a 1.5 version, go [here](https://steamcommunity.com/sharedfiles/filedetails/?id=3291415439)
+
 ## Feautures
 
 * Display various game information 
