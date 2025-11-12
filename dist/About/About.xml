@@ -2,7 +2,7 @@
 
 <ModMetaData>
 	<name>RimRPC - RichPresence</name>
-	<author>Weilbyte/ d1rknwh1te3 / Lunaberry</author>
+	<author>Weilbyte/ NovoDwarf / Lunaberry</author>
 	<supportedVersions>
 		<li>1.0</li>
 		<li>1.1</li>
@@ -17,4 +17,5 @@
 	</description>
 	<url>https://github.com/lunaberryyyy/RimWorldRPC</url>
 	<packageId>weilbyte.rimrpc</packageId>
+
 </ModMetaData>
