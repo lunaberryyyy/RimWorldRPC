@@ -16,6 +16,7 @@ This Version supports 1.0-1.4 & 1.6. if you're looking for a 1.5 version, go [he
 
 *Currently shows:*
 * Colony name
+* Biome
 * Amount of days colony has lasted
 * Hour of the current day
 * Quadrum
