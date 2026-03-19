@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using Verse;
+using static RimRPC.RimRPC;
 
 namespace RimRPC
 {
@@ -12,6 +13,7 @@ namespace RimRPC
         private static int _dayhour;
         private static float _colonistnumber;
         private static Quadrum _quadrum;
+        private static string _lastEvent;
 
         private static string GetColonyName() => Faction.OfPlayer.Name;
 
@@ -59,18 +61,23 @@ namespace RimRPC
 
                 if (map != null)
                 {
+                    var lastEvent = GlobalRpc.lastEvent;
                     var biome = Find.CurrentMap.Biome.LabelCap;
                     _biome = biome;
+                    _lastEvent = lastEvent;
                 }
 
-                string[] stateArgs = { _years.ToString(), _days.ToString(), _dayhour.ToString(), _quadrum.Label(), _biome };
-                string[] detailsArgs = { _colonyname, _colonistnumber.ToString()};
+                string[] stateArgs = { _years.ToString(), _days.ToString(), _dayhour.ToString(), _quadrum.Label(), _biome};
+                string[] detailsArgs = { _colonyname, _colonistnumber.ToString(), _lastEvent };
 
                 RimRPC.Presence.State = BuildString("state", stateArgs);
                 RimRPC.Presence.Details = BuildString("details", detailsArgs);
                 RimRPC.Presence.LargeImageText = "RimWorld";
-                RimRPC.Presence.SmallImageKey = "inmap";
+                RimRPC.Presence.SmallImageKey = RWRPCMod.Settings.RpcInmap.ToString();
                 RimRPC.Presence.SmallImageText = "RPC_Playing".Translate();
+
+                Log.Message(RimRPC.Presence.Details);            //this does doesnt show the 3rd arg
+                Log.Message(_lastEvent);                         //this works
 
                 if (RWRPCMod.Settings.RpcTime)
                     RimRPC.Presence.StartTimestamp = RimRPC.Started;

@@ -1,4 +1,5 @@
 ﻿using Verse;
+using static RimRPC.RimRPC;
 
 namespace RimRPC
 {
@@ -26,8 +27,6 @@ namespace RimRPC
 
             if (RWRPCMod.Settings.RpcBiome)
                 state += $" | {biome}";
-                //state += biome;
-
             return state;
         }
 

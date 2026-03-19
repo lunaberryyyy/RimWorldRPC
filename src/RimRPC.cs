@@ -2,6 +2,7 @@
 using RimWorld;
 using System;
 using System.Reflection;
+using System.Security.Cryptography;
 using Verse;
 
 namespace RimRPC
@@ -14,8 +15,12 @@ namespace RimRPC
 
             MethodInfo targetmethod = AccessTools.Method(typeof(MainMenuDrawer), nameof(MainMenuDrawer.MainMenuOnGUI));
             HarmonyMethod postfixmethod = new HarmonyMethod(typeof(RimRPC), "GoToMainMenu_Postfix");
+            MethodInfo eventtarget = AccessTools.Method(typeof(IncidentWorker), "TryExecute");
+            HarmonyMethod eventwatch = new HarmonyMethod(typeof(RimRPC), "Event_overwatch");
+
             
             femboyfoxes.Patch(targetmethod, null, postfixmethod);
+            femboyfoxes.Patch(eventtarget, null, eventwatch);
 
             RimRPC.BootMeUp();
         }
@@ -40,7 +45,7 @@ namespace RimRPC
             eventHandlers.SpectateCallback = (DiscordRPC.SpectateCallback)Delegate.Combine(eventHandlers.SpectateCallback, new DiscordRPC.SpectateCallback(SpectateCallback));
             eventHandlers.RequestCallback = (DiscordRPC.RequestCallback)Delegate.Combine(eventHandlers.RequestCallback, new DiscordRPC.RequestCallback(RequestCallback));
 
-            DiscordRPC.Initialize("428272711702282252", ref eventHandlers, true, "0612");
+            DiscordRPC.Initialize("1483917459240128724", ref eventHandlers, true, "0612");
 
             Presence = default;
             Presence.LargeImageKey = "logo";
@@ -74,6 +79,11 @@ namespace RimRPC
             Log.Message("RichPresence :: DisconnectedCallback: " + errorCode + " " + message);
         }
 
+        public static class GlobalRpc
+        {
+            public static string lastEvent;
+        }
+
         private static void ReadyCallback()
         {
             Log.Message("RichPresence :: Running");
@@ -81,8 +91,17 @@ namespace RimRPC
 
         public static void GoToMainMenu_Postfix()
         {
-            Log.Message("RichPresence :: Attempted MainMenu_Postfix");
+            //Log.Message("RichPresence :: Attempted MainMenu_Postfix");
             StateHandler.MenuState();
+        }
+
+        public static void Event_overwatch(IncidentWorker __instance, IncidentParms parms, bool __result)
+        {
+            if(__result)
+            {
+                //Log.Message($" > {__instance.def.label}");
+                GlobalRpc.lastEvent = __instance.def.label;
+            }
         }
     }
 }

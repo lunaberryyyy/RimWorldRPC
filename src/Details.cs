@@ -1,4 +1,5 @@
 ﻿using Verse;
+using static RimRPC.RimRPC;
 
 namespace RimRPC
 {
@@ -8,6 +9,7 @@ namespace RimRPC
         {
             var _colonyname = args[0];
             var _colonistnumber = args[1];
+            var _lastEvent = args[2];
 
             if (RWRPCMod.Settings.RpcCustomTop)
                 return RWRPCMod.Settings.RpcCustomTopText;
@@ -26,7 +28,10 @@ namespace RimRPC
                 return _colonistnumber + " RPC_Colonists".Translate();
             }
 
-            return null;
+            if (RWRPCMod.Settings.RpcEvents)
+                return $" {_lastEvent}";
+
+            return "";
         }
     }
 }

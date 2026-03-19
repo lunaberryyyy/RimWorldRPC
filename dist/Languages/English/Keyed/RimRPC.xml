@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
+    <RPC_EventLabel>Events</RPC_EventLabel>
     <RPC_CategoryLabel>RimRPC</RPC_CategoryLabel>
     <RPC_ColonyLabel>Colony name</RPC_ColonyLabel>
     <RPC_ColonistCountLabel>Colonist count</RPC_ColonistCountLabel>
@@ -12,6 +13,11 @@
     <RPC_TimeLabel>Game session length (Requires restart)</RPC_TimeLabel>
     <RPC_UpdateLabel>Manually update presence</RPC_UpdateLabel>
 	
+    <waypoint>waypoint</waypoint>
+    <greendott>Green Dot</greendot>
+    <waypointnobg>waypoint W/ No Background</waypointnobg>
+    <mapnobg>Map W/ No Background</mapnobg>
+    <inmap>Default</inmap>
     <CustomTopCheckbox>Custom text (Top)</CustomTopCheckbox>
     <CustomBottomCheckbox>Custom text (Bottom)</CustomBottomCheckbox>
     <CustomTopLabel>Text</CustomTopLabel>
