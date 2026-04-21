@@ -14,7 +14,7 @@
     <RPC_UpdateLabel>Manually update presence</RPC_UpdateLabel>
 	
     <waypoint>waypoint</waypoint>
-    <greendott>Green Dot</greendot>
+    <greendot>Green Dot</greendot>
     <waypointnobg>waypoint W/ No Background</waypointnobg>
     <mapnobg>Map W/ No Background</mapnobg>
     <inmap>Default</inmap>
