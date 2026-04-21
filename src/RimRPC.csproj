@@ -33,6 +33,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RpcLoader.cs" />
     <Compile Include="Details.cs" />
     <Compile Include="DiscordRPC.cs" />
     <Compile Include="MapCompInjector.cs" />
@@ -55,6 +56,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="DiscordRpc\0discord-rpc.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

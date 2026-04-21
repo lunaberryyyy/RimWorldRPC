@@ -22,7 +22,9 @@ namespace RimRPC
             femboyfoxes.Patch(targetmethod, null, postfixmethod);
             femboyfoxes.Patch(eventtarget, null, eventwatch);
 
+            RpcLoader.LoadNativeLibrary();
             RimRPC.BootMeUp();
+
         }
     }
 
