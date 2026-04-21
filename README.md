@@ -26,7 +26,7 @@ This Version supports 1.0-1.4 & 1.6. if you're looking for a 1.5 version, go [he
 ## Installation
 
 1. Download the latest release [(link)](https://github.com/lunaberryyyy/RimWorldRPC/releases)
-2. Extract the `RimRPC` folder from the zip to your RimWorld Mod folder as per usual.
+2. Extract the `dist` folder from the zip to your RimWorld Mod folder as per usual and rename it to something memerable like RimRPC or RimworldDiscord.
 
 Thats pretty much it, youre set. 
 
