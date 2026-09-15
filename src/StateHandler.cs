@@ -76,8 +76,8 @@ namespace RimRPC
                 RimRPC.Presence.SmallImageKey = RWRPCMod.Settings.RpcInmap.ToString();
                 RimRPC.Presence.SmallImageText = "RPC_Playing".Translate();
 
-                Log.Message(RimRPC.Presence.Details);            //this does doesnt show the 3rd arg
-                Log.Message(_lastEvent);                         //this works
+                //Log.Message(RimRPC.Presence.Details);            //this does doesnt show the 3rd arg
+                //Log.Message(_lastEvent);                         //this works
 
                 if (RWRPCMod.Settings.RpcTime)
                     RimRPC.Presence.StartTimestamp = RimRPC.Started;

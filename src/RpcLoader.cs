@@ -27,7 +27,7 @@ namespace RimRPC
 
                 if (string.IsNullOrEmpty(libPath) || !File.Exists(libPath))
                 {
-                    Log.Error("[RimRPC] Native library not found: " + libPath);
+                    //Log.Error("[RimRPC] Native library not found: " + libPath);
                     return;
                 }
 
@@ -35,16 +35,16 @@ namespace RimRPC
 
                 if (handle == IntPtr.Zero)
                 {
-                    Log.Error("[RimRPC] Failed to load native library: " + libPath);
+                    //Log.Error("[RimRPC] Failed to load native library: " + libPath);
                 }
                 else
                 {
-                    Log.Message("[RimRPC] Successfully loaded native library.");
+                    //Log.Message("[RimRPC] Successfully loaded native library.");
                 }
             }
             catch (Exception e)
             {
-                Log.Error("[RimRPC] Exception while loading native library: " + e);
+                //Log.Error("[RimRPC] Exception while loading native library: " + e);
             }
         }
 

@@ -71,14 +71,14 @@ namespace RimRPC
 
         private static void ErrorCallback(int errorCode, string message)
         {
-            Log.Message("RichPresence :: Oopsie woopsie. We made a wittle fucky wucky!");
-            Log.Message("RichPresence :: ErrorCallback: " + errorCode + " " + message);
+           //Log.Message("RichPresence :: Oopsie woopsie. We made a wittle fucky wucky!");
+            //Log.Message("RichPresence :: ErrorCallback: " + errorCode + " " + message);
         }
 
         private static void DisconnectedCallback(int errorCode, string message)
         {
-            Log.Message("RichPresence :: Oopsie woopsie. We made a wittle fucky wucky!");
-            Log.Message("RichPresence :: DisconnectedCallback: " + errorCode + " " + message);
+            //Log.Message("RichPresence :: Oopsie woopsie. We made a wittle fucky wucky!");
+            //Log.Message("RichPresence :: DisconnectedCallback: " + errorCode + " " + message);
         }
 
         public static class GlobalRpc
@@ -88,7 +88,7 @@ namespace RimRPC
 
         private static void ReadyCallback()
         {
-            Log.Message("RichPresence :: Running");
+            //Log.Message("RichPresence :: Running");
         }
 
         public static void GoToMainMenu_Postfix()
